@@ -27,4 +27,11 @@ I divided the project into components I used 5 components
  - 3- Add @import "~bootstrap/dist/css/bootstrap.css"; in style.css file
 
 
+### Home Component 
+
+-  home component contain header and form (TDF or Reactive Form) 
+- 
+![rf](https://user-images.githubusercontent.com/61418344/220213554-1b15a372-a5d4-4392-89e0-891183b859fc.jpg)
+
+
 
