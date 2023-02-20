@@ -30,7 +30,7 @@ I divided the project into components I used 5 components
 ### Home Component 
 
 -  home component contain header and form (TDF or Reactive Form) 
-- 
+
 ![rf](https://user-images.githubusercontent.com/61418344/220213554-1b15a372-a5d4-4392-89e0-891183b859fc.jpg)
 
 
