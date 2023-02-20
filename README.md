@@ -20,4 +20,11 @@ I divided the project into components I used 5 components
 - if path not found  redirect pageNotFound Component
 
 
+ ### 3- I used Bootstrap
+ 
+ - 1- npm install --save bootstrap
+ - 2- Add "node_modules/bootstrap/dist/css/bootstrap.min.css" in Styles in angular.json file 
+ - 3- Add @import "~bootstrap/dist/css/bootstrap.css"; in style.css file
+
+
 
