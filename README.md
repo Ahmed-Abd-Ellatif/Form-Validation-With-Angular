@@ -3,11 +3,7 @@
 ## 1- I made a degram of the project.
 ![Screenshot 2023-02-21 004344](https://user-images.githubusercontent.com/61418344/220211173-23d7eace-84df-45fa-808d-8a1aa18aa3aa.jpg)
 I divided the project into components I used 5 components
-  1- Home
-  2- Header
-  3- Teamplate driven form
-  4- Reactive form
-  5- 404
+  ( Home, Header, Teamplate driven form, Reactive form, and  404 page )
 
 
 
