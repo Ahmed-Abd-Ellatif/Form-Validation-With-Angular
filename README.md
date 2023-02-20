@@ -44,6 +44,10 @@ I divided the project into components I used 5 components
 ### I created Validation of this form by using Template Driven Form (TDF)
 ![Validation in TDF](https://user-images.githubusercontent.com/61418344/220214096-eef64182-9a84-49b8-9543-c9b118df27d8.jpg)
 
+###when I complete  all fields validations disappear and the button non disabled  
+![Validation in TDF](https://user-images.githubusercontent.com/61418344/220214096-eef64182-9a84-49b8-9543-c9b118df27d8.jpg)
+
+
 
 
 
