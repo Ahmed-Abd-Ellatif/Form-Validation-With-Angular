@@ -1,0 +1,280 @@
+<div class="container">
+  <div class="reactive__form">
+    <h2 class="title">Form with Reactive Form</h2>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <form [formGroup]="dataForm">
+      <!-- ////////////////////////////////////////////////////////////// -->
+      <!-- NAME && Email -->
+      <!-- ////////////////////////////////////////////////////////////// -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="examoleName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="examoleName"
+              placeholder="Enter Your Name"
+              formControlName="name"
+              [class.is-invalid]="name?.invalid && name?.touched"
+            />
+            <div *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+              <small class="text-danger" *ngIf="name?.errors?.['required']"
+                >Name is required</small
+              >
+              <small class="text-danger" *ngIf="name?.errors?.['minlength']"
+                >Name must be at least 5 characters long.</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ******************* -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Enter Your Email"
+              formControlName="email"
+              [class.is-invalid]="email?.invalid && email?.touched"
+            />
+            <div *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+              <small class="text-danger" *ngIf="email?.errors?.['required']"
+                >Email is required</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////// -->
+      <!-- Select -->
+      <!-- ///////////////////////////////////////////////////////////////////// -->
+
+      <div class="mb-3">
+        <label for="examolePosition" class="form-label">Position</label>
+        <select
+          class="form-select"
+          id="examolePosition"
+          aria-label="Default select example"
+          formControlName="position"
+          [class.is-invalid]="position?.invalid && position?.touched"
+        >
+          <option selected></option>
+          <option value="1">Frontend</option>
+          <option value="2">Backend</option>
+          <option value="3">Web Designer</option>
+          <option value="3">UI / UX</option>
+        </select>
+        <div
+          *ngIf="position?.invalid && (position?.touched || position?.dirty)"
+        >
+          <small class="text-danger" *ngIf="position?.errors?.['required']"
+            >Position is required</small
+          >
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////////// -->
+      <!-- Avilability Date && Date Of Birth-->
+      <!-- ////////////////////////////////////////////////////////////// -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="examoleAvilabilityDate" class="form-label"
+              >Avilability Date</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="examoleAvilabilityDate"
+              formControlName="avilabilityDate"
+              [class.is-invalid]="
+                avilabilityDate?.invalid && avilabilityDate?.touched
+              "
+            />
+            <div
+              *ngIf="
+                avilabilityDate?.invalid &&
+                (avilabilityDate?.touched || avilabilityDate?.dirty)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="avilabilityDate?.errors?.['required']"
+                >Avilability Date is required</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ******************* -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="exampleInputDateOfBirth" class="form-label"
+              >Date Of Birth</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="exampleInputDateOfBirth"
+              formControlName="dateOfBirth"
+              [class.is-invalid]="dateOfBirth?.invalid && dateOfBirth?.touched"
+            />
+            <div
+              *ngIf="
+                dateOfBirth?.invalid &&
+                (dateOfBirth?.touched || dateOfBirth?.dirty)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="dateOfBirth?.errors?.['required']"
+              >
+                Date of Birth is required</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="exampleInputExpectedSalary" class="form-label"
+          >Expected Salary</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputExpectedSalary"
+          placeholder="Enter Your Expected Salary"
+          formControlName="salary"
+          [class.is-invalid]="salary?.invalid && salary?.touched"
+        />
+        <div *ngIf="salary?.invalid && (salary?.touched || salary?.dirty)">
+          <small class="text-danger" *ngIf="salary?.errors?.['required']">
+            Expected Salary is required</small
+          >
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////////// -->
+      <!-- Marital Status && Phone-->
+      <!-- ////////////////////////////////////////////////////////////// -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="examoleMaritalStatus" class="form-label"
+              >Marital Status</label
+            >
+            <select
+              class="form-select"
+              id="examoleMaritalStatus"
+              aria-label="Default select example"
+              formControlName="maritalStatus"
+              [class.is-invalid]="
+                maritalStatus?.invalid && maritalStatus?.touched
+              "
+            >
+              <option selected></option>
+              <option value="2">Single</option>
+              <option value="3">Engaged</option>
+              <option value="1">Married</option>
+            </select>
+            <div
+              *ngIf="
+                maritalStatus?.invalid &&
+                (maritalStatus?.touched || maritalStatus?.dirty)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="maritalStatus?.errors?.['required']"
+              >
+                Marital Status is required</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ******************* -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="exampleInputPhone" class="form-label">Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="exampleInputPhone"
+              placeholder="Enter Your Phone"
+              formControlName="phone"
+              [class.is-invalid]="phone?.invalid && phone?.touched"
+            />
+            <div *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)">
+              <small class="text-danger" *ngIf="phone?.errors?.['required']">
+                Phone is required</small
+              >
+              <small class="text-danger" *ngIf="phone?.errors?.['pattern']">
+                Phone must be 11 digit</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <!-- Address -->
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="exampleInputAddress" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputAddress"
+          placeholder="Enter Your Address"
+          formControlName="address"
+          [class.is-invalid]="address?.invalid && address?.touched"
+        />
+        <div *ngIf="address?.invalid && (address?.touched || address?.dirty)">
+          <small class="text-danger" *ngIf="address?.errors?.['required']">
+            Address is required</small
+          >
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <!-- Attach File -->
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="AttachFile" class="form-label attach">
+          AttachFile
+          <img src="../../assets/attach.png" />
+        </label>
+        <input
+          type="file"
+          class="form-control"
+          id="AttachFile"
+          formControlName="attachFile"
+          [class.is-invalid]="attachFile?.invalid && attachFile?.touched"
+        />
+        <div
+          *ngIf="
+            attachFile?.invalid && (attachFile?.touched || attachFile?.dirty)
+          "
+        >
+          <small class="text-danger" *ngIf="attachFile?.errors?.['required']">
+            Attach File is required</small
+          >
+        </div>
+      </div>
+
+      <input
+        type="submit"
+        class="submit"
+        [disabled]="dataForm.invalid"
+        (click)="sendata(dataForm)"
+      />
+    </form>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+  </div>
+</div>

@@ -1,0 +1,300 @@
+<div class="container">
+  <div class="driven__form">
+    <h2 class="title">Form with Template Driven Form (TDF)</h2>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <form #dataForm="ngForm" novalidate>
+      <!-- ////////////////////////////////////////////////////////////// -->
+      <!-- NAME && Email -->
+      <!-- ////////////////////////////////////////////////////////////// -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="examoleName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="examoleName"
+              placeholder="Enter Your Name"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="userModel.name"
+              required
+              [class.is-invalid]="name.invalid && name.touched"
+            />
+            <div *ngIf="name.errors && (name.touched || name.dirty)">
+              <small class="text-danger" *ngIf="name.errors['required']"
+                >Name is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ******************* -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Enter Your Email"
+              name="email"
+              #email="ngModel"
+              [(ngModel)]="userModel.email"
+              required
+              [class.is-invalid]="email.invalid && email.touched"
+            />
+            <div *ngIf="email.errors && (email.touched || email.dirty)">
+              <small class="text-danger" *ngIf="email.errors['required']"
+                >Email is required.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////// -->
+      <!-- Select -->
+      <!-- ///////////////////////////////////////////////////////////////////// -->
+
+      <div class="mb-3">
+        <label for="examolePosition" class="form-label">Position</label>
+        <select
+          class="form-select"
+          id="examolePosition"
+          aria-label="Default select example"
+          name="position"
+          [(ngModel)]="userModel.position"
+          #position="ngModel"
+          required
+          [class.is-invalid]="position.invalid && position.touched"
+        >
+          <option selected></option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Web Designer">Web Designer</option>
+          <option value="UI / UX">UI / UX</option>
+        </select>
+        <div *ngIf="position.errors && (position.touched || position.dirty)">
+          <small class="text-danger" *ngIf="position.errors['required']"
+            >Position is required.</small
+          >
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////////// -->
+      <!-- Avilability Date && Date Of Birth-->
+      <!-- ////////////////////////////////////////////////////////////// -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="examoleAvilabilityDate" class="form-label"
+              >Avilability Date</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="examoleAvilabilityDate"
+              name="avilabilityDate"
+              #avilabilityDate="ngModel"
+              [(ngModel)]="userModel.avilabilityDate"
+              required
+              [class.is-invalid]="
+                avilabilityDate.invalid && avilabilityDate.touched
+              "
+            />
+            <div
+              *ngIf="
+                avilabilityDate.errors &&
+                (avilabilityDate.touched || avilabilityDate.dirty)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="avilabilityDate.errors['required']"
+                >Avilability Date is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ******************* -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="exampleInputDateOfBirth" class="form-label"
+              >Date Of Birth</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="exampleInputDateOfBirth"
+              placeholder="Enter Your Email"
+              name="dateOfBirth"
+              [(ngModel)]="userModel.dateOfBirth"
+              required
+              #dateOfBirth="ngModel"
+              [class.is-invalid]="dateOfBirth.invalid && dateOfBirth.touched"
+            />
+            <div
+              *ngIf="
+                dateOfBirth.errors && (dateOfBirth.touched || dateOfBirth.dirty)
+              "
+            >
+              <small class="text-danger" *ngIf="dateOfBirth.errors['required']"
+                >Date of Birth is required.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="exampleInputExpectedSalary" class="form-label"
+          >Expected Salary</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputExpectedSalary"
+          placeholder="Enter Your Expected Salary"
+          name="salary"
+          #salary="ngModel"
+          [(ngModel)]="userModel.salary"
+          required
+          [class.is-invalid]="salary.invalid && salary.touched"
+        />
+        <div *ngIf="salary.errors && (salary.touched || salary.dirty)">
+          <small class="text-danger" *ngIf="salary.errors['required']"
+            >Expected Salary is required.</small
+          >
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////////// -->
+      <!-- Marital Status && Phone-->
+      <!-- ////////////////////////////////////////////////////////////// -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="examoleMaritalStatus" class="form-label"
+              >Marital Status</label
+            >
+            <select
+              class="form-select"
+              id="examoleMaritalStatus"
+              aria-label="Default select example"
+              name="maritalStatus"
+              #maritalStatus="ngModel"
+              [(ngModel)]="userModel.maritalStatus"
+              required
+              [class.is-invalid]="
+                maritalStatus.invalid && maritalStatus.touched
+              "
+            >
+              <option selected></option>
+              <option value="Single">Single</option>
+              <option value="Engaged">Engaged</option>
+              <option value="Married">Married</option>
+            </select>
+            <div
+              *ngIf="
+                maritalStatus.errors &&
+                (maritalStatus.touched || maritalStatus.dirty)
+              "
+            >
+              <small
+                class="text-danger"
+                *ngIf="maritalStatus.errors['required']"
+                >Marital Status is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ******************* -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="exampleInputPhone" class="form-label">Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="exampleInputPhone"
+              placeholder="Enter Your Phone"
+              name="phone"
+              #phone="ngModel"
+              [(ngModel)]="userModel.phone"
+              required
+              pattern="\d{11}$"
+              [class.is-invalid]="phone.invalid && phone.touched"
+            />
+            <div *ngIf="phone.errors && (phone.touched || phone.dirty)">
+              <small class="text-danger" *ngIf="phone.errors['required']"
+                >Phone is required.</small
+              >
+              <small class="text-danger" *ngIf="phone.errors['pattern']"
+                >phone number must be 11 digit.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <!-- Address -->
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="exampleInputAddress" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputAddress"
+          placeholder="Enter Your Address"
+          name="address"
+          #address="ngModel"
+          [(ngModel)]="userModel.address"
+          required
+          [class.is-invalid]="address.invalid && address.touched"
+        />
+        <div *ngIf="address.errors && (address.touched || address.dirty)">
+          <small class="text-danger" *ngIf="address.errors['required']"
+            >Address is required.</small
+          >
+        </div>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <!-- Attach File -->
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="mb-3">
+        <label for="AttachFile" class="form-label attach">
+          AttachFile
+          <img src="../../assets/attach.png" />
+        </label>
+        <input
+          type="file"
+          class="form-control"
+          id="AttachFile"
+          name="attachFile"
+          #attachFile="ngModel"
+          [(ngModel)]="userModel.attachFile"
+          required
+          [class.is-invalid]="attachFile.invalid && attachFile.touched"
+        />
+        <div
+          *ngIf="attachFile.errors && (attachFile.touched || attachFile.dirty)"
+        >
+          <small class="text-danger" *ngIf="attachFile.errors['required']"
+            >Attach File is required.</small
+          >
+        </div>
+      </div>
+
+      <input
+        type="submit"
+        class="submit"
+        [disabled]="dataForm.form.invalid"
+        (click)="SendData(dataForm.form)"
+      />
+    </form>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+  </div>
+</div>
