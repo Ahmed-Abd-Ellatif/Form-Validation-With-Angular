@@ -19,6 +19,12 @@ I divided the project into components I used 5 components
 - if path === 'reactive-form'  Reactive-form Component
 - if path not found  redirect pageNotFound Component
 
+### header (navbar)
+- Form1  redirect to Template-driven-form Component
+- Form 2 redirect to Reactive-form Component
+![navbar](https://user-images.githubusercontent.com/61418344/220215840-89f58a5c-a239-44e9-8dc6-7886607752ca.jpg)
+
+
 
  ### 3- I used Bootstrap
  
