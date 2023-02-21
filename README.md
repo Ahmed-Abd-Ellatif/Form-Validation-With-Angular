@@ -74,6 +74,24 @@ I divided the project into components I used 5 components
 
 
 
+### why different between (TDF and Reactive Form)
+## Template Driven Form 
+
+> - write in HTML
+> - Tow Way Binding
+> - used in Small or medium Cases
+
+## Reactive Form 
+
+> - Typescript
+> - used in Large Cases
+> - add validation at runtime 
+> - add or remove controls at runtime
+> - add validation based on conditions
+
+
+
+
 
 
 
