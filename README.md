@@ -47,6 +47,22 @@ I divided the project into components I used 5 components
 ### when I complete  all fields validations disappear and the button non disabled  
 ![complate data TDF](https://user-images.githubusercontent.com/61418344/220214401-8ef6e00c-772f-4ec7-9033-6d3372c9e2e2.jpg)
 
+### Reactive Form 
+
+- contain on different inputs in types
+- button Disabled
+![RForm](https://user-images.githubusercontent.com/61418344/220215134-d706b669-596d-41cc-b989-3e66d8571f96.jpg)
+
+
+### I created Validation of this form by using Reactive Form
+![Validation in RF](https://user-images.githubusercontent.com/61418344/220215212-f3621df8-e73b-4423-b42b-b30b6c21ff99.jpg)
+
+
+### hen I complete all fields validations disappear and the button non disabled
+![complate data Rf](https://user-images.githubusercontent.com/61418344/220215243-028a0c55-38cf-4c65-ac01-ef062b0c6359.jpg)
+
+
+
 
 
 
