@@ -75,7 +75,7 @@ I divided the project into components I used 5 components
 
 
 
-## why different between (TDF and Reactive Form)
+## what different between (TDF and Reactive Form)
 ### Template Driven Form 
 
 > - write in HTML
